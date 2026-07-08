@@ -4,7 +4,7 @@ Menu Command
 
 ## Version
 
-**1.0.1** - 7/6/2026
+**1.0.2** - 7/8/2026
 
 This plug-in is written in Vectorscript (Pascal) and can be used in any version of [Vectorworks](https://www.vectorworks.net) 2019 or newer.
 
@@ -97,7 +97,7 @@ The categories for this plug-in are as follows:
 
 - **3000** - *Dialog Strings*: These strings are used in the dialog boxes and can all freely be changed.
 - **4000** - *Dialog Help Strings*: These strings are used in the **Help Box** at the bottom of the main dialog box and can all be freely changed.
-- **5000** - *Misc Strings*: This currently only contains the file path for the checkmark icon and should not be changed.
+- **5000** - *Misc Strings*: This currently only contains the file paths for the list browser icons and should not be changed.
 
 ## Release Notes
 
@@ -105,6 +105,7 @@ The categories for this plug-in are as follows:
 | :---: | :---: | :--- |
 | 07/05/2026 | 1.0.0 | Initial release |
 | 07/06/2026 | 1.0.1 | Fixed bug causing script to hang with certain object types |
+| 07/08/2026 | 1.0.2 | Fixed bug with objects not sending if both directions are specified |
 
 ## Known Bugs
 
