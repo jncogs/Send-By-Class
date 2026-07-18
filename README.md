@@ -112,7 +112,10 @@ The categories for this plug-in are as follows:
 
 - **3000** - *Dialog Strings*: These strings are used in the dialog boxes and can all freely be changed.
 - **4000** - *Dialog Help Strings*: These strings are used in the **Help Box** at the bottom of the main dialog box and can all be freely changed.
-- **5000** - *Misc Strings*: This currently only contains the file paths for the list browser icons and should not be changed.
+- **5000** - *Misc Strings*: These strings serve a variety of purposes in the code. Only the ones listed below can be changed.
+    - **5002**: Resource Manager folder where **Presets** information is stored. This is "*Send By Class Presets*" by default.
+    - **5003**: Value listed in **Presets** drop-down menu when no **Preset** is selected. This is "*\<No Preset>*" by default.
+    - **5004**: Warning given when a name entered during the **Add Preset** process already exists in the drawing.
 
 ## Release Notes
 
