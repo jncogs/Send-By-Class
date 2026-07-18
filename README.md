@@ -4,7 +4,7 @@ Menu Command
 
 ## Version
 
-**1.0.2** - 7/8/2026
+**1.1.0** - 7/17/2026
 
 This plug-in is written in Vectorscript (Pascal) and can be used in any version of [Vectorworks](https://www.vectorworks.net) 2019 or newer.
 
@@ -24,7 +24,8 @@ This menu command opens a dialog box allowing the user to send objects of chosen
 1. Check the **On Layers** option to include objects on Design or Sheet Layers.
 1. Check the **Viewport Annotations** option to include objects inside of Viewport Annotation spaces. This option requires that **On Layers** also be checked.
 1. Check the **Symbol Definitions** option to include objects inside of Symbol Definitions. If **On Layers** is unchecked, **Symbol Definitions** will be automatically checked and locked.
-1. Press **OK** to close the dialog box and send objects depending on set options.
+1. Press **Add Preset** to save current Class settings to a **Preset** for easy and fast recall later.
+1. Press **OK** to close the dialog box and send objects depending on set options. Pressing **OK** will also save all **Preset** changes.
 
 ## Main Dialog Box Explanation
 
@@ -39,6 +40,10 @@ This menu command opens a dialog box allowing the user to send objects of chosen
     1. **On Layers** will send all objects on Design and Sheet Layers matching chosen Classes.
     1. **Viewport Annotations** will send all objects within Viewport Annotations. This option requires that **On Layers** also be checked.
     1. **Symbol Definitions** will send all objects inside Symbol Definitions matching chosen Classes. Please note that this will *every* object within *every* Symbol Definition in the active drawing, so this operation may take more time depending on the number and complexity of Symbols and how many Classes have been chosen.
+1. Selecting a **Preset** from the drop-down will load Class and Include settings from a saved **Preset**.
+1. Press **Add Preset** to store current Class and Include settings into a new **Preset**.
+1. Press **Update Preset** to update the currently selected **Preset** with the current Class and Include settings.
+1. Press **Delete Preset** to delete the currently selected **Preset**. This operation will only be finalized by pressing the **OK** button.
 1. **Help Box**. Mousing over any dialog box element will display an explanation of the element here.
 1. Press **Cancel** to close the dialog box without sending any objects.
 1. Click and drag this handle to resize the dialog box.
@@ -48,10 +53,20 @@ This menu command opens a dialog box allowing the user to send objects of chosen
 
 ![Select Classes dialog example](images/select-classes-dialog-example.jpg)
 
-- This dialog should show all Classes in the active file.
-- Clicking on a Class will select that Class, clicking again will deselect that Class.
-- Multiple Classes can be selected/deselected at a time using the **Shift** key or the **Ctrl**/**Command** keys.
-- The direction radio buttons at the bottom of the dialog will apply to *all* of the selected Classes above. This can be changed later by checking the proper column in the main dialog box.
+1. Enter text into the search box to filter Classes containing the text. Capitalization is ignored.
+1. Classes with matching text from the search box will populated in the list box. If the search box is empty, the list box should display all Classes in the active drawing not already in the main dialog box.
+    - Clicking on a Class will select that Class, clicking again will deselect that Class.
+    - Multiple Classes can be selected/deselected at a time using the **Shift** key or the **Ctrl**/**Command** keys.
+    - A selected class will appear <mark style="background-color: blue; color:white">highlighted</mark>.
+1. The direction radio buttons at the bottom of the dialog will apply to *all* of the selected Classes above. This can be changed later by checking the proper column in the main dialog box.
+1. Press the **OK** button to close the dialog box and add selected Classes to the main dialog box.
+1. Press the **Cancel** button to close the dialog box without adding Classes to the main dialog box.
+
+## Presets
+
+As of version **1.1.0**, different combinations of Classes, send directions, and Include Objects options can be stored in "**Presets**" for quick and easy recall. These **Presets** are stored in the active drawing as Worksheet resources in a folder called **Send By Class Presets**. The tool looks specifically for Worksheets in this folder, so it is advised not to move them.
+
+These **Presets** are not fully stored until the **OK** button is pressed on the main dialog box.  Instead, temporary Worksheets are created with a **tmp** prefix to store the settings while you are inside the dialog box. Pressing **Cancel** will delete these temporary Worksheets while keeping the original Worksheets intact. Because of this, it is **STRONGLY** advised that you avoid closing the dialog box using the "X" (on Windows) or red "close button" (on Mac), as those temporary Worksheets will remain in the drawing.
 
 ## Installation Instructions
 
@@ -106,6 +121,7 @@ The categories for this plug-in are as follows:
 | 07/05/2026 | 1.0.0 | Initial release |
 | 07/06/2026 | 1.0.1 | Fixed bug causing script to hang with certain object types |
 | 07/08/2026 | 1.0.2 | Fixed bug with objects not sending if both directions are specified |
+| 07/17/2026 | 1.1.0 | Added Search box to Add Classes dialog <br> Added ability to save Presets |
 
 ## Known Bugs
 
@@ -113,9 +129,7 @@ No Known Bugs
 
 ## Feature Requests
 
-| Date Logged | Request |
-| :---: | :--- |
-| 07/05/2026 | Add ability to store settings as presets for fast recall |
+No current Feature Requests
 
 ## License
 
